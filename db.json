@@ -1,0 +1,7 @@
+{
+  "spices": [
+    { "id": 1, "name": "turmeric", "color": "yellow", "inStock": false },
+    { "id": 2, "name": "allspice", "color": "black", "inStock": false },
+    { "id": 3, "name": "paprika", "color": "red", "inStock": false }
+  ]
+}

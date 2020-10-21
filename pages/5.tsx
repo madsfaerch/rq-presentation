@@ -67,7 +67,7 @@ function Home() {
           Submit
         </Button>
       </div>
-      <Navigation prev="3" next="5" />
+      <Navigation prev="4" next="6" />
     </>
   );
 }

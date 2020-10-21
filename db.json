@@ -1,7 +1,82 @@
 {
   "spices": [
-    { "id": 1, "name": "turmeric", "color": "yellow", "inStock": false },
-    { "id": 2, "name": "allspice", "color": "black", "inStock": false },
-    { "id": 3, "name": "paprika", "color": "red", "inStock": false }
+    {
+      "id": 1,
+      "name": "Turmeric",
+      "color": "yellow",
+      "inStock": false
+    },
+    {
+      "id": 2,
+      "name": "Allspice",
+      "color": "black",
+      "inStock": false
+    },
+    {
+      "id": 3,
+      "name": "Paprika",
+      "color": "red",
+      "inStock": false
+    },
+    {
+      "name": "Green Cardamom",
+      "color": "green",
+      "inStock": false,
+      "id": 4
+    },
+    {
+      "name": "Black Cardamom",
+      "color": "black",
+      "inStock": false,
+      "id": 5
+    },
+    {
+      "name": "Star Anise",
+      "color": "black",
+      "inStock": false,
+      "id": 6
+    },
+    {
+      "name": "Cinnamon",
+      "color": "orange",
+      "inStock": false,
+      "id": 7
+    },
+    {
+      "name": "Saffron",
+      "color": "red",
+      "inStock": false,
+      "id": 8
+    },
+    {
+      "name": "Bay Leaf",
+      "color": "green",
+      "inStock": false,
+      "id": 9
+    },
+    {
+      "name": "Sumac",
+      "color": "red",
+      "inStock": false,
+      "id": 10
+    },
+    {
+      "name": "Black Pepper",
+      "color": "black",
+      "inStock": false,
+      "id": 11
+    },
+    {
+      "name": "Rose Pepper",
+      "color": "red",
+      "inStock": false,
+      "id": 12
+    },
+    {
+      "name": "Asafoetida",
+      "color": "yellow",
+      "inStock": false,
+      "id": 13
+    }
   ]
 }

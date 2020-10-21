@@ -5,10 +5,10 @@ type NavigationProps = {
 
 function Navigation({ prev, next }: NavigationProps) {
   return (
-    <div className="flex mt-auto">
+    <div className="w-full flex mt-auto">
       {prev && (
         <a
-          className="mr-auto py-2 px-4 bg-indigo-600 hover:bg-indigo-700 font-medium text-white rounded"
+          className="mr-auto py-2 px-4 bg-gray-200 hover:bg-gray-400 font-medium text-gray-600 hover:text-gray-800 rounded"
           href={`/${prev}`}
         >
           Previous
@@ -16,7 +16,7 @@ function Navigation({ prev, next }: NavigationProps) {
       )}
       {next && (
         <a
-          className="ml-auto py-2 px-4 bg-indigo-600 hover:bg-indigo-700 font-medium text-white rounded"
+          className="ml-auto py-2 px-4 bg-gray-200 hover:bg-gray-400 font-medium text-gray-600 hover:text-gray-800 rounded"
           href={`/${next}`}
         >
           Next

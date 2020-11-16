@@ -1,26 +1,40 @@
-type NavigationProps = {
-  prev?: string;
-  next?: string;
-};
+import { useRouter } from "next/router";
+import Link from "next/link";
+import React from "react";
 
-function Navigation({ prev, next }: NavigationProps) {
+function Navigation() {
+  const router = useRouter();
+
+  let slide = router.query.slide;
+
+  if (Array.isArray(slide)) {
+    slide = slide[0];
+  }
+
+  if (!slide) {
+    slide = "0";
+  }
+
+  let index = parseInt(slide, 10);
+
+  const previous = index === 0 ? undefined : index - 1;
+  const next = index + 1;
+
   return (
     <div className="w-full flex mt-auto">
-      {prev && (
-        <a
-          className="mr-auto py-2 px-4 bg-gray-200 hover:bg-gray-400 font-medium text-gray-600 hover:text-gray-800 rounded"
-          href={`/${prev}`}
-        >
-          Previous
-        </a>
+      {previous !== undefined && (
+        <Link href={`/${previous}`}>
+          <a className="mr-auto py-2 px-4 bg-gray-200 hover:bg-gray-400 font-medium text-gray-600 hover:text-gray-800 rounded">
+            Previous
+          </a>
+        </Link>
       )}
       {next && (
-        <a
-          className="ml-auto py-2 px-4 bg-gray-200 hover:bg-gray-400 font-medium text-gray-600 hover:text-gray-800 rounded"
-          href={`/${next}`}
-        >
-          Next
-        </a>
+        <Link href={`/${next}`}>
+          <a className="ml-auto py-2 px-4 bg-gray-200 hover:bg-gray-400 font-medium text-gray-600 hover:text-gray-800 rounded">
+            Next
+          </a>
+        </Link>
       )}
     </div>
   );

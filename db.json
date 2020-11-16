@@ -77,6 +77,84 @@
       "color": "yellow",
       "inStock": false,
       "id": 13
+    },
+    {
+      "name": "Ginger",
+      "color": "yellow",
+      "inStock": false,
+      "id": 14
+    },
+    {
+      "name": "Coriander Seed",
+      "color": "brown",
+      "inStock": false,
+      "id": 15
+    },
+    {
+      "name": "Fenugreek Leaf",
+      "color": "green",
+      "inStock": false,
+      "id": 16
+    },
+    {
+      "name": "White Pepper",
+      "color": "white",
+      "inStock": false,
+      "id": 17
+    },
+    {
+      "name": "Cumin",
+      "color": "brown",
+      "inStock": false,
+      "id": 18
+    },
+    {
+      "name": "Oregano",
+      "color": "green",
+      "inStock": false,
+      "id": 19
+    },
+    {
+      "name": "Thyme",
+      "color": "green",
+      "inStock": false,
+      "id": 20
+    },
+    {
+      "name": "Smoked Paprika",
+      "color": "red",
+      "inStock": false,
+      "id": 21
+    },
+    {
+      "name": "Yellow spice",
+      "color": "yellow",
+      "inStock": false,
+      "id": 22
     }
-  ]
+  ],
+  "profile": {
+    "name": "Mads",
+    "favoriteSpiceColor": "red"
+  },
+  "basket": {
+    "items": [
+      {
+        "itemId": 1,
+        "quantity": 3
+      },
+      {
+        "itemId": 13,
+        "quantity": 2
+      },
+      {
+        "itemId": 7,
+        "quantity": 1
+      },
+      {
+        "itemId": 10,
+        "quantity": 1
+      }
+    ]
+  }
 }

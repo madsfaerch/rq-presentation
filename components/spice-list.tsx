@@ -16,27 +16,37 @@ function SpiceItem(props: SpiceItemProps) {
 
 type SpiceListProps = {
   title?: string;
-  spices: Spice[];
+  spices: Spice[] | undefined;
   filterFn?(spice: Spice): boolean;
+  onClick?(spice: Spice): void;
 };
 
 export function ListSpices({
   spices,
   title,
   filterFn = () => true,
+  onClick,
 }: SpiceListProps) {
   return (
-    <div className="mt-4">
+    <div style={{ minHeight: "130px" }}>
       <h2 className="font-bold mb-2">{title || "Spices:"}</h2>
-      <ul>
-        {spices.filter(filterFn).map((spice) => {
-          return (
-            <li key={spice.id} className="inline-block mb-2 mr-2">
-              <SpiceItem {...spice} />
-            </li>
-          );
-        })}
-      </ul>
+      {spices && spices.length > 0 ? (
+        <ul>
+          {spices.filter(filterFn).map((spice) => {
+            return (
+              <li
+                key={spice.id}
+                onClick={() => onClick && onClick(spice)}
+                className="inline-block mb-2 mr-2"
+              >
+                <SpiceItem {...spice} />
+              </li>
+            );
+          })}
+        </ul>
+      ) : (
+        <p>No spices here.</p>
+      )}
     </div>
   );
 }

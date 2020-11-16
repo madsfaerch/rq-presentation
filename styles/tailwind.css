@@ -1,3 +1,38 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+hr {
+  @apply w-full my-6;
+}
+
+.content {
+  @apply mb-6;
+}
+
+.content h2 {
+  @apply text-lg font-bold mb-2;
+}
+
+pre {
+  @apply rounded-lg bg-gray-700 text-purple-100 p-4 my-6;
+}
+
+.loading-indicator {
+  @apply w-full h-1 bg-purple-500 rounded-sm;
+  transform-origin: center left;
+  transform: scaleX(0);
+}
+
+.loading-indicator--isLoading {
+  animation: loading 2000ms infinite linear forwards;
+}
+
+@keyframes loading {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}

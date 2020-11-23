@@ -1,8 +1,8 @@
 import React from "react";
-import OnClick from "../slides/OnClick";
+import Intro from "../slides/Intro";
 
 function Home() {
-  return <OnClick />;
+  return <Intro />;
 }
 
 export default Home;

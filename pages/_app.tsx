@@ -3,6 +3,7 @@ import Head from "next/head";
 import { AppProps } from "next/dist/next-server/lib/router/router";
 import { Navigation } from "../components/navigation";
 import { ReactQueryConfigProvider } from "react-query";
+import { ReactQueryDevtools } from "react-query-devtools";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -12,7 +13,9 @@ function MyApp({ Component, pageProps }: AppProps) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <ReactQueryConfigProvider
-        config={{ queries: { staleTime: 0, cacheTime: 0 } }}
+        config={{
+          queries: { refetchOnWindowFocus: false, cacheTime: Infinity },
+        }}
       >
         <div className="min-h-screen flex text-gray-900">
           <div className="container min-h-full max-w-5xl mx-auto p-4 flex flex-col items-start">
@@ -20,6 +23,7 @@ function MyApp({ Component, pageProps }: AppProps) {
               <h1 className="text-2xl font-bold">react-query</h1>
             </header>
             <Component {...pageProps} />
+            <ReactQueryDevtools initialIsOpen />
             <Navigation />
           </div>
         </div>

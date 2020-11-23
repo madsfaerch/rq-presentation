@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Button } from "../components/button";
 import { Code } from "../components/code";
 import { LoadingIndicator } from "../components/loading-indicator";
 import { SpiceCounter } from "../components/spice-counter";
@@ -29,6 +30,7 @@ useEffect(() => {
 export type SpiceState = "idle" | "loading" | "error";
 
 function MultipleUseEffect() {
+  const [nSpiceCounter, setNSpiceCounters] = React.useState(1);
   const [spices, setSpices] = useState<Spice[] | undefined>();
   const [spiceState, setSpiceState] = useState<SpiceState>("idle");
 
@@ -64,14 +66,20 @@ function MultipleUseEffect() {
       <LoadingIndicator isLoading={isLoading} />
       <ListSpices spices={spices} />
       <h2 className="my-10 font-bold text-lg">Somewhere else on the page...</h2>
-      <SpiceCounter className="mb-10" />
+      <Button onClick={() => setNSpiceCounters((prevState) => prevState + 1)}>
+        Add spice counter
+      </Button>
+      <div className="flex flex-wrap mt-4">
+        {Array.from({ length: nSpiceCounter }).map((_, index) => (
+          <SpiceCounter key={index} className="mb-2 mr-5" />
+        ))}
+      </div>
       <hr />
       <h2 className="mt-10 mb-4 font-bold text-lg">Challenges include:</h2>
-      <ul className="pl-4 list-disc">
-        <li>Sharing data</li>
+      <ul className="pl-4 pb-10 list-disc">
+        <li>Caching data</li>
         <li>Invalidating data</li>
         <li>Fetching data at intervals</li>
-        <li>Caching data</li>
         <li>Deduping requests</li>
         <li>Optimistic UI updates</li>
         <li>Server side rendering</li>

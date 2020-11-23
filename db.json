@@ -1,22 +1,22 @@
 {
   "spices": [
     {
-      "id": 1,
       "name": "Turmeric",
       "color": "yellow",
-      "inStock": false
+      "inStock": false,
+      "id": 1
     },
     {
-      "id": 2,
       "name": "Allspice",
       "color": "black",
-      "inStock": false
+      "inStock": false,
+      "id": 2
     },
     {
-      "id": 3,
       "name": "Paprika",
       "color": "red",
-      "inStock": false
+      "inStock": false,
+      "id": 3
     },
     {
       "name": "Green Cardamom",
@@ -125,36 +125,10 @@
       "color": "red",
       "inStock": false,
       "id": 21
-    },
-    {
-      "name": "Yellow spice",
-      "color": "yellow",
-      "inStock": false,
-      "id": 22
     }
   ],
   "profile": {
     "name": "Mads",
     "favoriteSpiceColor": "red"
-  },
-  "basket": {
-    "items": [
-      {
-        "itemId": 1,
-        "quantity": 3
-      },
-      {
-        "itemId": 13,
-        "quantity": 2
-      },
-      {
-        "itemId": 7,
-        "quantity": 1
-      },
-      {
-        "itemId": 10,
-        "quantity": 1
-      }
-    ]
   }
 }

@@ -13,14 +13,12 @@ export function SpiceCounterRQ({ className }: SpiceCounterProps) {
   const spices = useQuery("spices", fetchSpices);
   // const { data, isFetching} = useSpices();
 
-  const classes = classNames("flex flex-col", className);
-
   function invalidateQuery() {
     queryCache.invalidateQueries("spices");
   }
 
   return (
-    <div className={classes}>
+    <div className={classNames("flex flex-col", className)}>
       <LoadingIndicator isLoading={spices.isFetching} />
       <div
         onClick={invalidateQuery}

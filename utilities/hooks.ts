@@ -2,5 +2,5 @@ import { useQuery } from "react-query";
 import { fetchSpices } from "./fetch";
 
 export function useSpices() {
-  return useQuery("spices", fetchSpices, { staleTime: 10000 });
+  return useQuery("spices", fetchSpices);
 }

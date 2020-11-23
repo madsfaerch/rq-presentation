@@ -1,6 +1,7 @@
 import { useRouter } from "next/router";
 import Link from "next/link";
 import React from "react";
+import { queryCache } from "react-query";
 
 function Navigation() {
   const router = useRouter();
@@ -19,6 +20,10 @@ function Navigation() {
 
   const previous = index === 0 ? undefined : index - 1;
   const next = index + 1;
+
+  React.useEffect(() => {
+    queryCache.clear();
+  }, [router.pathname]);
 
   return (
     <div className="w-full flex mt-auto">
